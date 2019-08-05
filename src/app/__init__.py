@@ -20,8 +20,8 @@ def create_app(config_name):
 	return app
 
 def register_blueprints(app):
-	from pages import pages_blueprint
-	from services import services_blueprint
+	from app.pages import pages_blueprint
+	from app.services import services_blueprint
 	
 	app.register_blueprint(services_blueprint)
 	app.register_blueprint(pages_blueprint)
