@@ -5,8 +5,8 @@ from psycopg2 import extras
 import json
 import requests
 from threading import currentThread
-from app.sheetsapi import getCreds
-from app.dbconnect import connect
+from app.utils.sheetsapi import getCreds
+from app.utils.utils_db_connect import connect
 
 service = getCreds()
 conn = connect()
