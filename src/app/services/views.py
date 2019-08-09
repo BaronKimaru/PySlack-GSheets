@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, request, abort
 from threading import Thread, currentThread
 from pprint import pprint
-from app.utils_slack_sheets import call_db_student_details_worker
+from app.utils.utils_slack_sheets import call_db_student_details_worker
 
 from . import service_blueprint
 
@@ -56,8 +56,9 @@ def student_details():
 
     except Exception as e:
         print("The error is: ", e), pprint(type(e))
-        pprint("general Error")
         message = "General Error"
 
     finally:
         return jsonify(message), 200
+		
+		

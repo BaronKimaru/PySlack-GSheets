@@ -7,8 +7,6 @@ from oauth2client import file, client, tools
 from config import app_config
 
 
-
-
 def create_app(config_name):
 	"""Creates the app to run the program"""
 	app = Flask(__name__, instance_relative_config=True)
@@ -16,6 +14,10 @@ def create_app(config_name):
 	app.config.from_pyfile('config.py')
 	register_blueprints(app)
 	#intitialize_extensions(app)
+	
+	@app.route('/home')
+	def home():
+		return "Home"
 	
 	return app
 

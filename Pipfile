@@ -7,12 +7,21 @@ verify_ssl = true
 
 [packages]
 flask = "*"
+<<<<<<< HEAD
 psycopg2 = "*"
 flask-api = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 google-api-python-client = "*"
 oauth2client = "*"
+=======
+flask-api = "*"
+psycopg2 = "*"
+google-api-python-client = "*"
+oauth2client = "*"
+terminaltables = "*"
+requests = "*"
+>>>>>>> ef34fb91972695450ad5c4c77f66a1f69f97c9b5
 
 [requires]
 python_version = "3.6"
